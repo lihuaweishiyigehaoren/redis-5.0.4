@@ -2052,7 +2052,7 @@ void initServer(void) {
 
     /* Open the TCP listening socket for the user commands. */
     if (server.port != 0 &&
-        listenToPort(server.port,server.ipfd,&server.ipfd_count) == C_ERR)
+        listenToPort(server.port,server.ipfd,&server.ipfd_count) == C_ERR) // 网络通信侦听
         exit(1);
 
     /* Open the listening Unix domain socket. */

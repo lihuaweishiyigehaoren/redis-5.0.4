@@ -437,6 +437,13 @@ int anetWrite(int fd, char *buf, int count)
     return totlen;
 }
 
+/*
+* bind listen 绑定地址端口并侦听
+* @param err 
+* @param sa 
+* @param len 
+* @param backlog
+*/
 static int anetListen(char *err, int s, struct sockaddr *sa, socklen_t len, int backlog) {
     if (bind(s,sa,len) == -1) {
         anetSetError(err, "bind: %s", strerror(errno));
@@ -462,6 +469,13 @@ static int anetV6Only(char *err, int s) {
     return ANET_OK;
 }
 
+/*
+* 
+* @param err 
+* @param sa 
+* @param len 
+* @param backlog
+*/
 static int _anetTcpServer(char *err, int port, char *bindaddr, int af, int backlog)
 {
     int s = -1, rv;

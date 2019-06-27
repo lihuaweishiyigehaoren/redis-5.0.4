@@ -1,7 +1,16 @@
+
+
+# 概述
+
+为了省事，我直接在官网下载了最新版并传了上来
+
+这次对redis的注解，我主要是对redis网络通信做详细的注解，也是为了学习大牛们对各种情况所做的处理。
+
+
+
 This README is just a fast *quick start* document. You can find more detailed documentation at [redis.io](https://redis.io).
 
-What is Redis?
---------------
+# What is Redis?
 
 Redis is often referred as a *data structures* server. What this means is that Redis provides access to mutable data structures via a set of commands, which are sent using a *server-client* model with TCP sockets and a simple protocol. So different processes can query and modify the same data structures in a shared way.
 
